@@ -28,13 +28,13 @@ class MovieDetailsPage extends Component {
     this.setState({ movie });
 
     // console.log(movie, cast, reviews);
-    console.log(movie);
+    // console.log(movie);
 
     const guy = this.state.movie.genres.map(genre => genre.name);
     console.log(guy);
 
-    const prod = this.state.movie.production_countries.map(prod => prod.name);
-    console.log(prod);
+    // const prod = this.state.movie.production_countries.map(prod => prod.name);
+    // console.log(prod);
   }
 
   render() {
