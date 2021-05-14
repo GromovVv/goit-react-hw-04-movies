@@ -1,0 +1,30 @@
+.movies-container {
+    padding: 0 30px;
+
+}
+
+.movie-card {
+    padding: 10px;
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.movie-item {
+    margin: 20px;
+    width: 300px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgb(177, 177, 177);
+    background-color: #fff;
+    transition: .25s;
+
+}
+
+.movie-img {
+    width: 250px;
+    height: auto;
+    // overflow: hidden;
+}

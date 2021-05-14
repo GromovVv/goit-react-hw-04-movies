@@ -1,0 +1,20 @@
+.App {
+  text-align: center;
+}
+
+.Nav {
+    background-color: rgb(211, 211, 211);
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+
+}
+
+.nav-list_item {
+  padding: 10px;
+}
