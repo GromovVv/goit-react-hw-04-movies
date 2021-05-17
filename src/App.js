@@ -4,8 +4,7 @@ import HomePage from './Views/HomePage';
 import MoviesPage from './Views/MoviesPage';
 import PageNotFound from './Views/PageNotFound';
 import MovieDetailsPage from './Views/MovieDetailsPage';
-// import Cast from './Views/Cast';
-// import Reviews from './Views/Reviews';
+
 
 import './App.css';
 
@@ -38,8 +37,6 @@ const App = () => {
         <Route exact path="/" component={HomePage} />
         <Route path="/movies/:movieId" component={MovieDetailsPage} />
         <Route path="/movies" component={MoviesPage} />
-        {/* <Route path="/movies/:movieId/cast" component={Cast} /> */}
-        {/* <Route path="/movies/:movieId/reviews" component={Reviews} /> */}
         <Route component={PageNotFound} />
         <Redirect to="/" />
       </Switch>

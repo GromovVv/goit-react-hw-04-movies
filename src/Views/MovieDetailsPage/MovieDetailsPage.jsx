@@ -1,7 +1,10 @@
 import './MovieDetailsPage.scss';
 
 import { Component } from 'react';
-// import { NavLink } from 'react-router-dom';
+import { NavLink, Route, Switch } from 'react-router-dom';
+
+// import Cast from './Views/Cast';
+// import Reviews from './Views/Reviews';
 
 import {
   fetchMovieById,
@@ -30,16 +33,11 @@ class MovieDetailsPage extends Component {
     // console.log(movie, cast, reviews);
     // console.log(movie);
 
-    const guy = this.state.movie.genres.map(genre => genre.name);
-    console.log(guy);
-
-    // const prod = this.state.movie.production_countries.map(prod => prod.name);
-    // console.log(prod);
   }
 
   render() {
     const {
-      // id,
+      id,
       title,
       genres,
       poster_path,
@@ -50,20 +48,23 @@ class MovieDetailsPage extends Component {
     } = this.state.movie;
 
     return (
-      <div>
-        {/* <button type="button" onClick={this.onHandleSearch}>Hallo</button> */}
+      id !== undefined && (
+        <div>
+        <button type="button" >Back</button>
         <h2>{title}</h2>
         <img src={IMAGE_URL + poster_path} alt={title} />
         <p>{`${vote_average} of 10`}</p>
         <p>{`Date of release: ${release_date}`}</p>
-        <p>{genres.map(genre => genre.name).join(' / ')}</p>
-        {/* <p>{this.state.movie.production_countries.map(prod => prod.name)}</p> */}
+        <p>{genres !== undefined ? genres.map(genre => genre.name).join(' / ') : ''}</p>
+
         {/* <ul>
           {genres.map(({ id, name }) => <li key={id}>{name}</li>)}
         </ul> */}
         <p>{overview}</p>
-      </div>
-    );
+        </div>
+      )
+    )
+     
   }
 }
 
