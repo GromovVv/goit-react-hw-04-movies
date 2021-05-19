@@ -16,12 +16,13 @@ class SaerchForm extends Component {
   };
 
   render() {
+    const { query } = this.state;
     return (
       <form className="form" onSubmit={this.handleSubmit}>
         <input
           className="form-input"
           type="text"
-          value={this.state.query}
+          value={query}
           onChange={this.handleChange}
           autoComplete="off"
           autoFocus

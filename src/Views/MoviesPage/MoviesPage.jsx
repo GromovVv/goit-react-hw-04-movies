@@ -11,7 +11,14 @@ class MoviesPage extends Component {
     searchQuery: '',
   };
 
-  async componentDidMount() {}
+  componentDidMount() {
+    const { location } = this.props;
+
+    if (location?.state?.searchQuery !== undefined) {
+      this.getMoviesByQuery(location.state.searchQuery);
+    }
+    
+  }
 
   async getMoviesByQuery(query) {
     const response = await searchMovies(query);
@@ -33,19 +40,30 @@ class MoviesPage extends Component {
   };
 
   handleSubmit = event => {
+    const { searchQuery } = this.state;
+    const { location, history } = this.props;
+
     event.preventDefault();
 
-    this.getMoviesByQuery(this.state.searchQuery);
+    this.getMoviesByQuery(searchQuery);
+
+    history.push({
+      ...location,
+      search: `query=${searchQuery}`,
+      state: { searchQuery },
+    });
   };
 
   render() {
+    const { movies, query } = this.state;
+
     return (
       <div className="movie-page">
         <form className="form" onSubmit={this.handleSubmit}>
           <input
             className="form-input"
             type="text"
-            value={this.state.query}
+            value={query}
             onChange={this.handleChange}
             autoComplete="off"
             autoFocus
@@ -56,7 +74,7 @@ class MoviesPage extends Component {
           </button>
         </form>
         <ul className="movie-list">
-          {this.state.movies.map(({ id, name, title, poster_path }) => {
+          {movies.map(({ id, name, title, poster_path }) => {
             return (
               <li key={id} className="movie-item">
                 <NavLink to={`/movies/${id}`}>

@@ -30,8 +30,11 @@ class MovieDetailsPage extends Component {
     this.setState({ movie, cast, reviews });
   }
 
-  onPageBack = () => {
+  handleGoBack = () => {
     const { location, history } = this.props;
+
+    console.log(location);
+    console.log(history);
     history.push(location?.state?.from || '/');
   };
 
@@ -49,12 +52,15 @@ class MovieDetailsPage extends Component {
     const { url, path } = this.props.match;
 
     // const { from } = this.props.history.location.state;
+    console.log(this.props.history.location.state);
+
+    const { cast, reviews } = this.state;
 
 
     return (
       id !== undefined && (
         <div>
-          <button type="button" onClick={this.onPageBack}>Back</button>
+          <button type="button" onClick={this.handleGoBack}>Back</button>
           <div className="card-wrapperr">
             <h2>{title}</h2>
             <img src={IMAGE_URL + poster_path} alt={title} />
@@ -100,8 +106,8 @@ class MovieDetailsPage extends Component {
                 return (
                   <Cast
                     {...props}
-                    cast={this.state.cast}
-                    onClick={this.pageBackClick}
+                    cast={cast}
+                    onClick={this.handleGoBack}
                   />
                 );
               }}
@@ -109,7 +115,7 @@ class MovieDetailsPage extends Component {
             <Route
               path={`${path}/reviews`}
               render={props => {
-                return <Reviews {...props} reviews={this.state.reviews} />;
+                return <Reviews {...props} reviews={reviews} />;
               }}
             />
           </Switch>

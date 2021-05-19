@@ -19,10 +19,11 @@ class HomePage extends Component {
 
 
   render() {
+    const { movies } = this.state;
     return (
       <div className="movies-container">
         <ul className="movie-list">
-          {this.state.movies.map(({ id, name, title, poster_path }) => {
+          {movies.map(({ id, name, title, poster_path }) => {
             return <li key={id} className="movie-item"> 
               <NavLink to={`/movies/${id}`}>
                 <div className="movie-card">
