@@ -1,7 +1,7 @@
 import './MovieDetailsPage.scss';
 
 import { Component } from 'react';
-import { NavLink, Route, Switch } from 'react-router-dom';
+import { NavLink, Route, Switch, withRouter } from 'react-router-dom';
 
 import Cast from '../Cast';
 import Reviews from '../Reviews';
@@ -52,6 +52,7 @@ class MovieDetailsPage extends Component {
     const { url, path } = this.props.match;
 
     // const { from } = this.props.history.location.state;
+    
     console.log(this.props.history.location.state);
 
     const { cast, reviews } = this.state;
@@ -125,4 +126,4 @@ class MovieDetailsPage extends Component {
   }
 }
 
-export default MovieDetailsPage;
+export default withRouter(MovieDetailsPage);

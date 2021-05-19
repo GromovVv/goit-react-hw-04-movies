@@ -24,7 +24,7 @@ class MoviesPage extends Component {
     const response = await searchMovies(query);
 
     if (query.trim() === '') {
-      console.log('You need to write correct query to find');
+      alert('You need to write correct query to find');
       return;
     }
 
