@@ -1,0 +1,38 @@
+{
+  "files": {
+    "static/js/0.3987f6aa.chunk.js": "/static/js/0.3987f6aa.chunk.js",
+    "static/js/0.3987f6aa.chunk.js.map": "/static/js/0.3987f6aa.chunk.js.map",
+    "home-page.css": "/static/css/home-page.c9bd0940.chunk.css",
+    "home-page.js": "/static/js/home-page.bfc1cd4a.chunk.js",
+    "home-page.js.map": "/static/js/home-page.bfc1cd4a.chunk.js.map",
+    "main.css": "/static/css/main.e57f9308.chunk.css",
+    "main.js": "/static/js/main.9ea14e17.chunk.js",
+    "main.js.map": "/static/js/main.9ea14e17.chunk.js.map",
+    "movie-details-page.css": "/static/css/movie-details-page.3775e0b3.chunk.css",
+    "movie-details-page.js": "/static/js/movie-details-page.250426bf.chunk.js",
+    "movie-details-page.js.map": "/static/js/movie-details-page.250426bf.chunk.js.map",
+    "movie-page.css": "/static/css/movie-page.f35c29f6.chunk.css",
+    "movie-page.js": "/static/js/movie-page.3ff2d0e7.chunk.js",
+    "movie-page.js.map": "/static/js/movie-page.3ff2d0e7.chunk.js.map",
+    "nor-found-page.css": "/static/css/nor-found-page.afd7172b.chunk.css",
+    "nor-found-page.js": "/static/js/nor-found-page.ffe7aeb7.chunk.js",
+    "nor-found-page.js.map": "/static/js/nor-found-page.ffe7aeb7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.410db25b.js",
+    "runtime-main.js.map": "/static/js/runtime-main.410db25b.js.map",
+    "static/js/7.e9174617.chunk.js": "/static/js/7.e9174617.chunk.js",
+    "static/js/7.e9174617.chunk.js.map": "/static/js/7.e9174617.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/home-page.c9bd0940.chunk.css.map": "/static/css/home-page.c9bd0940.chunk.css.map",
+    "static/css/main.e57f9308.chunk.css.map": "/static/css/main.e57f9308.chunk.css.map",
+    "static/css/movie-details-page.3775e0b3.chunk.css.map": "/static/css/movie-details-page.3775e0b3.chunk.css.map",
+    "static/css/movie-page.f35c29f6.chunk.css.map": "/static/css/movie-page.f35c29f6.chunk.css.map",
+    "static/css/nor-found-page.afd7172b.chunk.css.map": "/static/css/nor-found-page.afd7172b.chunk.css.map",
+    "static/js/7.e9174617.chunk.js.LICENSE.txt": "/static/js/7.e9174617.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.410db25b.js",
+    "static/js/7.e9174617.chunk.js",
+    "static/css/main.e57f9308.chunk.css",
+    "static/js/main.9ea14e17.chunk.js"
+  ]
+}
