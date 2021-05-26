@@ -9,11 +9,11 @@ class Reviews extends Component {
     const { reviews } = this.props;
 
     return reviews.length !== 0 ? (
-      <ul>
+      <ul className="reviews-list">
         {reviews.map(review => (
           <li key={review.id}>
             <h3>Author: {review.author}</h3>
-            <p>{review.content}</p>
+            <p className="text">{review.content}</p>
           </li>
         ))}
       </ul>

@@ -1,11 +1,6 @@
 import { Route, NavLink, Switch, Redirect } from 'react-router-dom';
 import { Suspense, lazy } from 'react';
 
-// import HomePage from './Views/HomePage';
-// import MoviesPage from './Views/MoviesPage';
-// import MovieDetailsPage from './Views/MovieDetailsPage';
-// import PageNotFound from './Views/PageNotFound';
-
 import './App.css';
 
 const HomePage = lazy(() =>
@@ -32,8 +27,8 @@ const App = () => {
             <NavLink
               to="/"
               exact
-              // className={link}
-              // activeClassName={activeLink}
+              className="link"
+              activeClassName="activeLink"
             >
               Home
             </NavLink>
@@ -41,8 +36,8 @@ const App = () => {
           <li>
             <NavLink
               to="/movies"
-              // className={link}
-              // activeClassName={activeLink}
+              className="link"
+              activeClassName="activeLink"
             >
               Movies
             </NavLink>

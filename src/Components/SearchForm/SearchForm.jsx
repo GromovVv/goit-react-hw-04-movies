@@ -1,6 +1,6 @@
 import { Component } from 'react';
 
-import './SaerchForm.scss';
+import './SearchForm.scss';
 
 class SaerchForm extends Component {
   state = {

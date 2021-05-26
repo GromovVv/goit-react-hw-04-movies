@@ -1,0 +1,123 @@
+.detail-page-btn {
+    margin : 30px 0;
+    width: 108px;
+    height: 30px;
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 51, 146);
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover, :focus {
+        color: rgb(153, 252, 175);
+    }
+}
+
+.card-wrapper {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 50px;
+    padding: 0 108px 20px;
+
+    background-color: #fff;
+
+
+    border: 1px solid black;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+.card-wrapper > p {
+    width: 400px;
+    text-align: left;
+ 
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 15px;
+}
+
+.overview-text {
+    width: 400px;
+}
+
+.card-wrapper > img {
+    width: 400px;
+    padding-bottom: 20px;
+
+    border-radius: 10px;
+}
+
+.detail-container-list {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 20px;
+    padding: 20px;
+
+    
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 25px;
+
+    text-decoration: none;
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 51, 146);
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover, :focus {
+        color: rgb(153, 252, 175);
+    }
+}
+
+.detail-list:last-child {
+    margin-left: 60px;
+}
+
+.link {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 35px;
+    padding-left: 25px;
+    color: rgb(255, 255, 255);
+  
+  }
+  
+.link:hover, link:focus {
+    color: rgb(153, 252, 175);
+  
+}
+  
+.activeLink {
+    color: rgb(160, 193, 255);
+}
+
+.details-additional-title {
+    padding: 30px;
+
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 35px;
+}
+
+.switch-container {
+    padding: 0 108px 20px;
+}
+
+.switch-container > p {
+    text-align-last: left;
+}

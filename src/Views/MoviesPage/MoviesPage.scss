@@ -10,6 +10,8 @@
 .movie-list {
     display: flex;
     flex-wrap: wrap;
+
+    padding: 0 60px;
 }
 
 .movie-item {
@@ -27,4 +29,54 @@
     width: 250px;
     height: auto;
     // overflow: hidden;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin: 30px;
+    height: 30px;
+}
+
+.form-input {
+    width: 400px;
+    height: 25px;
+
+    border: 1px solid black;
+    border-radius: 5px;
+    outline-style: none;
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+
+}
+
+.form-btn {
+    margin-left: 30px;
+    width: 108px;
+    height: 30px;
+
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 15px;
+
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 51, 146);
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover, :focus {
+        color: rgb(153, 252, 175);
+    }
+}
+
+.movies-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px 30px;
 }

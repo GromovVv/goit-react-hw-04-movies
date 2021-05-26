@@ -33,8 +33,6 @@ class MovieDetailsPage extends Component {
   handleGoBack = () => {
     const { location, history } = this.props;
 
-    console.log(location);
-    console.log(history);
     history.push(location?.state?.from || '/');
   };
 
@@ -51,18 +49,21 @@ class MovieDetailsPage extends Component {
 
     const { url, path } = this.props.match;
 
-    // const { from } = this.props.history.location.state;
-    
-    console.log(this.props.history.location.state);
+    const { from } = this.props.history.location.state;
 
     const { cast, reviews } = this.state;
-
 
     return (
       id !== undefined && (
         <div>
-          <button type="button" onClick={this.handleGoBack}>Back</button>
-          <div className="card-wrapperr">
+          <button
+            type="button"
+            className="detail-page-btn"
+            onClick={this.handleGoBack}
+          >
+            Back
+          </button>
+          <div className="card-wrapper">
             <h2>{title}</h2>
             <img src={IMAGE_URL + poster_path} alt={title} />
             <p>{`Rating:  ${vote_average} of 10`}</p>
@@ -73,43 +74,46 @@ class MovieDetailsPage extends Component {
                 : ''}
             </p>
 
-            <p>{overview}</p>
+            <p className="overview-text">{overview}</p>
           </div>
-          <h3>Additional information</h3>
-          <ul>
-          <NavLink
-              to={{
-                pathname: `${url}/cast`,
-                // state: {
-                //   from,
-                // },
-              }}
-            >
-              Cast
-            </NavLink>
-          </ul>
-          <ul>
-            <NavLink
-              to={{
-                pathname: `${url}/reviews`,
-                // state: {
-                //   from,
-                // },
-              }}
-            >
-              Films Reviews
-            </NavLink>{' '}
-          </ul>
+          <h3 className="details-additional-title">Additional information</h3>
+          <div className="detail-container-list">
+            <ul className="detail-list">
+              <NavLink
+                className="link"
+                activeClassName="activeLink"
+                to={{
+                  pathname: `${url}/cast`,
+                  state: {
+                    from,
+                  },
+                }}
+              >
+                Cast
+              </NavLink>
+            </ul>
+            <ul className="detail-list">
+              <NavLink
+                className="link"
+                activeClassName="activeLink"
+                to={{
+                  pathname: `${url}/reviews`,
+                  state: {
+                    from,
+                  },
+                }}
+              >
+                Reviews
+              </NavLink>{' '}
+            </ul>
+          </div>
+
           <Switch>
             <Route
               path={`${path}/cast`}
               render={props => {
                 return (
-                  <Cast
-                    {...props}
-                    cast={cast}
-                    onClick={this.handleGoBack}
-                  />
+                  <Cast {...props} cast={cast} onClick={this.handleGoBack} />
                 );
               }}
             />

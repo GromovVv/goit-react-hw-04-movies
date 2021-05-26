@@ -4,6 +4,8 @@ import { NavLink } from 'react-router-dom';
 import { IMAGE_URL, searchMovies } from '../../Services/MovieApi';
 
 import './MoviesPage.scss';
+import '../HomePage/HomePage.scss';
+
 
 class MoviesPage extends Component {
   state = {
@@ -56,9 +58,10 @@ class MoviesPage extends Component {
 
   render() {
     const { movies, query } = this.state;
-
+    const location = this.props.history.location;
     return (
-      <div className="movie-page">
+      <>
+      <div className="movies-page-container">
         <form className="form" onSubmit={this.handleSubmit}>
           <input
             className="form-input"
@@ -69,7 +72,7 @@ class MoviesPage extends Component {
             autoFocus
             placeholder="Search movies..."
           />
-          <button className="from-btn" type="submit">
+          <button className="form-btn" type="submit">
             Search
           </button>
         </form>
@@ -77,7 +80,12 @@ class MoviesPage extends Component {
           {movies.map(({ id, name, title, poster_path }) => {
             return (
               <li key={id} className="movie-item">
-                <NavLink to={`/movies/${id}`}>
+                <NavLink to={{
+                pathname: `/movies/${id}`,
+                state: {
+                  from: location
+                }
+              }}>
                   <div className="movie-card">
                     <img
                       className="movie-img"
@@ -94,6 +102,7 @@ class MoviesPage extends Component {
           })}
         </ul>
       </div>
+      </>
     );
   }
 }
